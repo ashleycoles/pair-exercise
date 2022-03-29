@@ -1,8 +1,10 @@
 # Pair programming exercise
 
+This exercise is all about building a basic online store. I've provided a pre-made database with some products, as well as HTML and CSS for most of the pages you'll need.
+
 ## Feature one - list products
 
-Using the database provide, create a basic product listing page. You'll find that there is already an index.php file with a basic template for what a product should look like. Some basic CSS has also been provided.
+Using the database provided, create a basic product listing page. You'll find that there is already an index.php file with a basic template for what a product should look like. Some basic CSS has also been provided.
 
 If there are no products in the database you should display an error message.
 
