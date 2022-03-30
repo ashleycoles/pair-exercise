@@ -7,6 +7,22 @@
 </head>
 <body>
 
+<nav>
+    <div class="container">
+        <div class="menu menu-left">
+            <ul>
+                <li><a href="index.php">Products</a></li>
+            </ul>
+        </div>
+        <div class="menu menu-right">
+            <ul>
+                <li><a href="basket.php">Basket</a></li>
+                <li><a href="account.php">My Account</a></li>
+                <li><a href="login.php">Log In</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
 <main>
     <div class="container products">
