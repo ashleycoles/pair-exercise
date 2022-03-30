@@ -1,3 +1,36 @@
+<?php
+
+require_once 'functions.php';
+session_start();
+
+loggedInRedirect();
+
+$error = '';
+
+if (isset($_GET['error'])) {
+    $error = $_GET['error'];
+}
+
+if (isset($_POST['username']) && isset($_POST['password'])) {
+    $db = getDbConnection();
+    $user = getSingleUser($db, $_POST['username']);
+
+    if (!$user) {
+        $error = 'Invalid username or password.';
+    } else {
+        if ($_POST['password'] === $user['password']) {
+            $_SESSION['loggedIn'] = true;
+            $_SESSION['userId'] = $user['id'];
+            header('Location: account.php');
+            exit;
+        } else {
+            $error = 'Invalid username or password.';
+        }
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,9 +67,7 @@
         // Display any errors
         // For example if a user tries to add a product to their basket without
         // being logged in
-        if (isset($_GET['error'])) {
-            echo $_GET['error'];
-        }
+        echo "<span>$error</span>";
 
         ?>
         <form class="login-form" method="post">

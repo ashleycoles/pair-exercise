@@ -51,6 +51,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     <div class="container" >
         <h1>Register</h1>
         <?php
+        // Display an error if registration failed
         if (isset($registered) && !$registered) {
             echo 'Error!';
         }

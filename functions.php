@@ -115,6 +115,20 @@ function registerUser(PDO $db, string $username, string $password) {
 }
 
 /**
+ * Fetch a single user from the database - used when logging in
+ *
+ * @param PDO $db
+ * @param string $username
+ * @return mixed
+ */
+function getSingleUser(PDO $db, string $username) {
+    $query = $db->prepare('SELECT `id`, `username`, `password` FROM `users` WHERE `username` = :username;');
+    $query->bindParam(':username', $username);
+    $query->execute();
+    return $query->fetch();
+}
+
+/**
  * Redirect a user home if they are logged in
  *
  * @return void
