@@ -28,17 +28,8 @@
 </nav>
 
 <main>
-    <div class="container" >
-        <h1>Register</h1>
-        <form class="register-form" method="post">
-            <label>Username
-                <input type="text" name="username" />
-            </label>
-            <label>Password
-                <input type="text" name="password" />
-            </label>
-            <input type="submit" />
-        </form>
+    <div class="container">
+
     </div>
 </main>
 </body>
