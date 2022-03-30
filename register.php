@@ -39,6 +39,8 @@
             </label>
             <input type="submit" />
         </form>
+        <h4>Already have an account? <a href="login.php">Login here</a></h4>
+
     </div>
 </main>
 </body>

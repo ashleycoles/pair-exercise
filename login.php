@@ -39,6 +39,7 @@
             </label>
             <input type="submit" />
         </form>
+        <h4>Don't have an account? <a href="register.php">Register here</a></h4>
     </div>
 </main>
 </body>

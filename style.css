@@ -7,6 +7,15 @@ body {
     margin: 0;
 }
 
+a {
+    color: #4689F0;
+    text-decoration: none;
+}
+
+a:hover, a:visited {
+    color: #0F4AA3;
+}
+
 .btn {
     text-decoration: none;
     padding: 10px;
