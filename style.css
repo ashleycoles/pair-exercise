@@ -1,12 +1,17 @@
 * {
     box-sizing: border-box;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
+
+body {
+    margin: 0;
 }
 
 .btn {
     text-decoration: none;
     padding: 10px;
     display: inline-block;
-    background-color: darkturquoise;
+    background-color: #F0B745;
     color: white;
     font-size: 20px;
     border-radius: 3px;
@@ -15,6 +20,36 @@
 .btn.disabled {
     pointer-events: none;
     background-color: grey;
+}
+nav {
+    background-color: #4689F0;
+}
+nav .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .menu ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav .menu ul li {
+
+}
+
+nav .menu ul li a {
+    padding: 10px 15px;
+    margin: 0 5px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #FFF;
+    font-weight: bold;
+}
+
+nav .menu ul li a:hover {
+    color: #F0B745;
 }
 
 .container {
