@@ -31,7 +31,9 @@
     <div class="container" >
         <h1>Login</h1>
         <?php
-
+        // Display any errors
+        // For example if a user tries to add a product to their basket without
+        // being logged in
         if (isset($_GET['error'])) {
             echo $_GET['error'];
         }
