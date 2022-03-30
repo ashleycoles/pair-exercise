@@ -128,6 +128,33 @@ function getSingleUser(PDO $db, string $username) {
     return $query->fetch();
 }
 
+
+/**
+ * Check to see if a user is currently logged in
+ *
+ * @return bool
+ */
+function loginCheck(): bool {
+    if (!isset($_SESSION['loggedIn'])) {
+        return false;
+    }
+    return true;
+}
+
+/**
+ * Generate HTML for a login/logout button
+ *
+ * @param bool $loggedIn
+ * @return string
+ */
+function displayLoginOutButton(bool $loggedIn): string {
+    if ($loggedIn) {
+        return '<a href="logout.php">Log Out</a>';
+    }
+    return '<a href="login.php">Log In</a>';
+
+}
+
 /**
  * Redirect a user home if they are logged in
  *

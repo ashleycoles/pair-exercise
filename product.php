@@ -36,7 +36,7 @@ if (isset($_GET['product_id']) && is_numeric($_GET['product_id'])) {
             <ul>
                 <li><a href="basket.php">Basket</a></li>
                 <li><a href="account.php">My Account</a></li>
-                <li><a href="login.php">Log In</a></li>
+                <li><li><?php echo displayLoginOutButton(loginCheck()) ?></li></li>
             </ul>
         </div>
     </div>

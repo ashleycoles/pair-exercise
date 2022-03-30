@@ -1,5 +1,6 @@
 <?php
 require_once 'functions.php';
+session_start();
 
 $db = getDbConnection();
 
@@ -30,7 +31,7 @@ $products = getAllProducts($db);
             <ul>
                 <li><a href="basket.php">Basket</a></li>
                 <li><a href="account.php">My Account</a></li>
-                <li><a href="login.php">Log In</a></li>
+                <li><?php echo displayLoginOutButton(loginCheck()) ?></li>
             </ul>
         </div>
     </div>
